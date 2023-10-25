@@ -68,4 +68,11 @@ using ZigZagBoomerang: poisson_time
             @test abs(p - pt) < 2/sqrt(n)
         end
     end
+
+    @testset "Poisson quadratic" begin # TODO: Meaningful. Just a funcction call
+        a, b = 2rand(2) .- 1
+        c = rand()
+        u = rand()
+        s = poisson_time(a, b, c, u)
+    end
 end
